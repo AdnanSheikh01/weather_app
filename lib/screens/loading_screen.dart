@@ -30,7 +30,7 @@ class LoadingScreen extends StatelessWidget {
                   height: 300,
                   width: 300,
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.deepPurpleAccent),
+                      shape: BoxShape.circle, color: Colors.grey),
                 ),
               ),
               Align(
@@ -39,7 +39,7 @@ class LoadingScreen extends StatelessWidget {
                   height: 300,
                   width: 300,
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.deepPurpleAccent),
+                      shape: BoxShape.circle, color: Colors.grey),
                 ),
               ),
               Align(
@@ -48,7 +48,7 @@ class LoadingScreen extends StatelessWidget {
                   height: 300,
                   width: 400,
                   decoration: BoxDecoration(
-                      shape: BoxShape.rectangle, color: Colors.amber[700]),
+                      shape: BoxShape.rectangle, color: Colors.deepOrange),
                 ),
               ),
               BackdropFilter(
