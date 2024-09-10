@@ -18,18 +18,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FutureBuilder(
-          future: _determinePosition(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return BlocProvider<WeatherBlocBloc>(
-                create: (context) => WeatherBlocBloc()
-                  ..add(FetchWeather(snapshot.data as Position)),
-                child: const HomePage(),
-              );
-            } else {
-              return const LoadingScreen();
-            }
-          }),
+        future: _determinePosition(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            var data = snapshot.data;
+            return BlocProvider<WeatherBlocBloc>(
+              create: (context) => WeatherBlocBloc()
+                ..add(
+                  FetchWeather(data),
+                ),
+              child: HomePage(
+                position: data as Position,
+              ),
+            );
+          } else {
+            return const LoadingScreen();
+          }
+        },
+      ),
     );
   }
 }

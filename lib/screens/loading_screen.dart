@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
@@ -47,7 +46,7 @@ class LoadingScreen extends StatelessWidget {
                 child: Container(
                   height: 300,
                   width: 400,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.rectangle, color: Colors.deepOrange),
                 ),
               ),
